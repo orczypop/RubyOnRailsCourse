@@ -1,0 +1,78 @@
+<h1>TALENTUM RoR BOOKSTORE</h1>
+
+<form action="/libros/baja">
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Genre</th>
+		<th>Update</th>
+		<th>Delete</th>
+	</tr>
+	<%
+	libros = Libro.all
+	
+	for libro in libros 
+		
+	%>
+	<tr>
+		<td><%=libro.titulo%></td>
+		<td><%=libro.autor%></td> 
+		<td><%=libro.genero%></td>
+		<td><a href="/libros/modificar_vista?id=<%=libro.id%>">Modificar</a></td>
+		<td><input type="checkbox" name="ids[]" value="<%=libro.id%>"/></td>
+	</tr>
+	<% end %>
+</table>
+<input type="submit" value="Borrar" id="boton_borrar">
+</form>
+
+<form>
+	Title<input type="text" name="titulo" value="<%=@libro.titulo%>"/>
+	Author<input type="text" name="autor" value="<%=@libro.autor%>"/>
+	Genre<input type="text" name="genero" value="<%=@libro.genero%>"/>
+	<input type="hidden" name="id" value="<%=@libro.id%>"/>
+	<input type="submit" value="New book" formaction="/libros/alta">
+	<input type="submit" value="Update" formaction="/libros/modificar">
+</form>
+<br>
+<br>
+<br>
+<br>
+<form>
+	Search<input type="text" name="valor"/>
+	<input type="submit" value="Search by title" formaction="/libros/buscar_titulo">
+	<input type="submit" value="Search by author" formaction="/libros/buscar_autor">
+	<input type="submit" value="Search by genre" formaction="/libros/buscar_genero">
+	
+</form>
+<br>
+
+<% if @libro != nil && @libro.errors.any? %>
+	<ul>
+		<%@libro.errors.full_messages.each do |mensaje_error| %>
+			<li><%=mensaje_error%></li>
+		<% end%>
+	</ul>
+<% end%>
+
+
+<% if @librosEncontrados != nil%>
+
+<table>
+	<tr>
+		<th>Título</th>
+		<th>Autor</th>
+		<th>Género</th>
+	</tr>
+	<%
+	for libro in  @librosEncontrados
+	%>
+	<tr>
+		<td><%=libro.titulo%></td>
+		<td><%=libro.autor%></td>
+		<td><%=libro.genero%></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>

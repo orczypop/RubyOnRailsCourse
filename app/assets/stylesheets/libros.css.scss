@@ -1,0 +1,43 @@
+// Place all the styles related to the libros controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  text-align:center;
+  margin:20px;
+  margin:0px auto;
+}
+
+
+tbody th{
+ background-color: #9DC6D8; 
+}
+
+body{
+font-family: "Arial"; 
+font-size:16px;  
+color: white;
+background-image:url("libreria.jpg");
+//background-repeat: no-repeat
+}
+
+table, th, td {
+  border:solid 1px white;
+  border-collapse: collapse;
+  width: 500px;
+  height: 20px;
+  text-align:center;
+  margin:0px auto; 
+}
+
+#boton_borrar{
+  margin-left: 420px;
+}
+
+a {
+ color: yellow;
+}
+
+a:hover{
+  color:pink;
+}
