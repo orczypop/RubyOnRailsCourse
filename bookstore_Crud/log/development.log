@@ -1,0 +1,4361 @@
+  [1m[36m (73.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (75.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateLibros (20160217083301)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "libros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar(255), "autor" varchar(255), "genero" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160217083301"]]
+  [1m[35m (87.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 09:58:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1041ms (Views: 1027.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 09:58:22 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:02 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:04 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:11 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:25 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 64ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:26 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:00:27 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:04 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 90ms (Views: 88.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:01:05 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 79ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:00 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:02:43 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:02:43 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:02:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:44 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:02:44 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:03:35 +0100
+
+
+Started GET "/libros/create?titulo=jlfkdsl&autor=sdfsda&genero=sdfsda&id=" for 127.0.0.1 at 2016-02-17 10:03:48 +0100
+Processing by LibrosController#create as HTML
+  Parameters: {"titulo"=>"jlfkdsl", "autor"=>"sdfsda", "genero"=>"sdfsda", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'jlfkdsl' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["autor", "sdfsda"], ["created_at", "2016-02-17 09:03:48.662401"], ["genero", "sdfsda"], ["titulo", "jlfkdsl"], ["updated_at", "2016-02-17 09:03:48.662401"]]
+  [1m[35m (105.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 332ms
+
+ActionView::Template::Error (undefined local variable or method `disco' for #<#<Class:0x7bc2820>:0x75a9a58>):
+    19: 		<td><input type="checkbox" name="ids[]" value="<%=libro.id%>"/></td>
+    20: 		<td><%=libro.titulo%></td>
+    21: 		<td><%=libro.autor%></td> 
+    22: 		<td><%=disco.genero%></td>
+    23: 		<td><a href="/libros/update_mostrar?id=<%=libro.id%>">Modificar</a></td>
+    24: 	</tr>
+    25: 	<% end %>
+  app/views/libros/index.html.erb:22:in `block in _app_views_libros_index_html_erb___39288597_65886456'
+  app/views/libros/index.html.erb:15:in `_app_views_libros_index_html_erb___39288597_65886456'
+  app/controllers/libros_controller.rb:14:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/libros/create?titulo=jlfkdsl&autor=sdfsda&genero=sdfsda&id=" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+Processing by LibrosController#create as HTML
+  Parameters: {"titulo"=>"jlfkdsl", "autor"=>"sdfsda", "genero"=>"sdfsda", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'jlfkdsl' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 97ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:04:11 +0100
+
+
+Started GET "/libros/update?titulo=jlfkdsl&autor=sdfsda&genero=sdfsda&id=" for 127.0.0.1 at 2016-02-17 10:04:15 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"jlfkdsl", "autor"=>"sdfsda", "genero"=>"sdfsda", "id"=>""}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Libro with 'id'=0):
+  app/controllers/libros_controller.rb:26:in `update'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.0ms)
+
+
+Started GET "/clientes/index" for 127.0.0.1 at 2016-02-17 10:08:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/clientes/index"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.0ms)
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 132ms (Views: 83.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:02 +0100
+
+
+Started GET "/libros/update_mostrar?id=1" for 127.0.0.1 at 2016-02-17 10:09:05 +0100
+Processing by LibrosController#update_mostrar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 61ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/libros/update?titulo=jlfkdsl&autor=sdfsda&genero=sdfsda&id=1" for 127.0.0.1 at 2016-02-17 10:09:10 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"jlfkdsl", "autor"=>"sdfsda", "genero"=>"sdfsda", "id"=>"1"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'jlfkdsl' AND "libros"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:11 +0100
+
+
+Started GET "/libros/update_mostrar?id=1" for 127.0.0.1 at 2016-02-17 10:09:16 +0100
+Processing by LibrosController#update_mostrar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/libros/update?titulo=jlfkdsl&autor=sdfsda&genero=Novela&id=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"jlfkdsl", "autor"=>"sdfsda", "genero"=>"Novela", "id"=>"1"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'jlfkdsl' AND "libros"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 1[0m  [["genero", "Novela"], ["updated_at", "2016-02-17 09:09:23.802832"]]
+  [1m[35m (58.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 115ms (Views: 46.0ms | ActiveRecord: 59.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:23 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=jlfkdsl" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"jlfkdsl"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'jlfkdsl'[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 91ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:38 +0100
+
+
+Started GET "/libros/buscar_autor?valor=sdfsda" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"sdfsda"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'sdfsda'[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:09:53 +0100
+
+
+Started GET "/libros/borrar?ids%5B%5D=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+Processing by LibrosController#borrar as HTML
+  Parameters: {"ids"=>["1"]}
+  [1m[35mSQL (77.0ms)[0m  DELETE FROM "libros" WHERE "libros"."id" IN (1)
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 152ms (Views: 70.0ms | ActiveRecord: 78.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:10 +0100
+
+
+Started GET "/libros/create?titulo=El+gato+F%C3%A9lix&autor=Desconocido&genero=Aventuras&id=" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+Processing by LibrosController#create as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"Desconocido", "genero"=>"Aventuras", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "Desconocido"], ["created_at", "2016-02-17 09:10:28.065380"], ["genero", "Aventuras"], ["titulo", "El gato Félix"], ["updated_at", "2016-02-17 09:10:28.065380"]]
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 170ms (Views: 53.0ms | ActiveRecord: 110.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:28 +0100
+
+
+Started GET "/libros/create?titulo=La+historia+interminable&autor=Michael+Ende&genero=Aventuras&id=2" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+Processing by LibrosController#create as HTML
+  Parameters: {"titulo"=>"La historia interminable", "autor"=>"Michael Ende", "genero"=>"Aventuras", "id"=>"2"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'La historia interminable' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["autor", "Michael Ende"], ["created_at", "2016-02-17 09:10:46.759110"], ["genero", "Aventuras"], ["titulo", "La historia interminable"], ["updated_at", "2016-02-17 09:10:46.759110"]]
+  [1m[35m (87.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 163ms (Views: 66.0ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:46 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=gato" for 127.0.0.1 at 2016-02-17 10:10:54 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"gato"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'gato'[0m
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:10:55 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=El+gato+F%C3%A9lix" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"El gato Félix"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix'[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:00 +0100
+
+
+Started GET "/libros/buscar_autor?valor=Desconocido" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"Desconocido"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'Desconocido'[0m
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:08 +0100
+
+
+Started GET "/libros/buscar_autor?valor=Michael+Ende" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"Michael Ende"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'Michael Ende'[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:18 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 99ms (Views: 81.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:24 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 67ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:11:53 +0100
+
+
+Started GET "/libros/create?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+Processing by LibrosController#create as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Hamlet' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "William Shakespeare"], ["created_at", "2016-02-17 09:12:50.138918"], ["genero", "Teatro"], ["titulo", "Hamlet"], ["updated_at", "2016-02-17 09:12:50.138918"]]
+  [1m[36m (76.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 187ms (Views: 97.0ms | ActiveRecord: 78.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:12:50 +0100
+
+
+Started GET "/libros/update_mostrar?id=4" for 127.0.0.1 at 2016-02-17 10:12:56 +0100
+Processing by LibrosController#update_mostrar as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 53ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatral&id=4" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatral", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 4  [["genero", "Teatral"], ["updated_at", "2016-02-17 09:13:00.490397"]]
+  [1m[36m (90.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 164ms (Views: 61.0ms | ActiveRecord: 91.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:13:00 +0100
+
+
+Started GET "/libros/update_mostrar?id=4" for 127.0.0.1 at 2016-02-17 10:13:02 +0100
+Processing by LibrosController#update_mostrar as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 4  [["genero", "Teatro"], ["updated_at", "2016-02-17 09:13:08.206083"]]
+  [1m[36m (140.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 216ms (Views: 66.0ms | ActiveRecord: 141.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:13:08 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 89ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:14:44 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (0.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:58 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 61.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:15:59 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:16:45 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:46 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:16:56 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:16:57 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (0.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 93ms (Views: 81.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:17:32 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 107ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:09 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 45.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:33 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+Processing by LibrosController#update as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 64ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:18:55 +0100
+
+
+Started GET "/libros/update?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:23:00 +0100
+
+ActionController::RoutingError (No route matches [GET] "/libros/update"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:23:12 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 76ms (Views: 65.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:13 +0100
+
+
+Started GET "/libros/alta?titulo=dfdsa&autor=sdfsada&genero=fdsa&id=" for 127.0.0.1 at 2016-02-17 10:23:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/libros/alta"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.0ms)
+
+
+Started GET "/libros/alta?titulo=dfdsa&autor=sdfsada&genero=fdsa&id=" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"dfdsa", "autor"=>"sdfsada", "genero"=>"fdsa", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (0.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'dfdsa' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["autor", "sdfsada"], ["created_at", "2016-02-17 09:23:54.738368"], ["genero", "fdsa"], ["titulo", "dfdsa"], ["updated_at", "2016-02-17 09:23:54.738368"]]
+  [1m[35m (120.0ms)[0m  commit transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 185ms (Views: 51.0ms | ActiveRecord: 122.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:23:54 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:24:00 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/libros/modificar?titulo=Hamlet&autor=William+Shakespeare&genero=Teatral&id=4" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+Processing by LibrosController#modificar as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatral", "id"=>"4"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 4[0m  [["genero", "Teatral"], ["updated_at", "2016-02-17 09:24:06.163343"]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 177ms (Views: 84.0ms | ActiveRecord: 84.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:06 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:24:08 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/libros/modificar?titulo=Hamlet&autor=William+Shakespeare&genero=Teatro&id=4" for 127.0.0.1 at 2016-02-17 10:24:14 +0100
+Processing by LibrosController#modificar as HTML
+  Parameters: {"titulo"=>"Hamlet", "autor"=>"William Shakespeare", "genero"=>"Teatro", "id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (0.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'Hamlet' AND "libros"."id" != 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 4[0m  [["genero", "Teatro"], ["updated_at", "2016-02-17 09:24:14.802048"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 194ms (Views: 70.0ms | ActiveRecord: 110.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:24:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:24:15 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:25:01 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 92ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:25:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:25:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:02 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:02 +0100
+
+
+Started GET "/libros/alta?titulo=&autor=&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"", "autor"=>"", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 68ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:25:20 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:25:36 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:27:07 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:08 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:27:43 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:17 +0100
+
+
+Started GET "/libros/modificar_vista?id=4" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:28:32 +0100
+
+
+Started GET "/libros/alta?titulo=&autor=&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:28:39 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"", "autor"=>"", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 73ms (Views: 50.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:01 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:16 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 67.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:30 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 88ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:29:59 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 79ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:30:12 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 77ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:09 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 69ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:36 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 75ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:31:37 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:16 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 95ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:26 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:37 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 78ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:32:50 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 94ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:01 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 103ms (Views: 90.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:33:55 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 123ms (Views: 96.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:34:18 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 109ms (Views: 98.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:36:48 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:06 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 65ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:14 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 92ms (Views: 71.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:23 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:31 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:32 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:40 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:41 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 85ms (Views: 78.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:50 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=dfsaf&genero=sdfa&id=" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"dfsaf", "genero"=>"sdfa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 70ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:37:58 +0100
+
+
+Started GET "/libros/baja?ids%5B%5D=5" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+Processing by LibrosController#baja as HTML
+  Parameters: {"ids"=>["5"]}
+  [1m[35mSQL (64.0ms)[0m  DELETE FROM "libros" WHERE "libros"."id" IN (5)
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 137ms (Views: 68.0ms | ActiveRecord: 65.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:38:27 +0100
+
+
+Started GET "/libros/alta?titulo=Tambi%C3%A9n+esto+pasar%C3%A1&autor=Milena+Busquets&genero=Ficci%C3%B3n&id=" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"También esto pasará", "autor"=>"Milena Busquets", "genero"=>"Ficción", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'También esto pasará' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "Milena Busquets"], ["created_at", "2016-02-17 09:41:24.080589"], ["genero", "Ficción"], ["titulo", "También esto pasará"], ["updated_at", "2016-02-17 09:41:24.080589"]]
+  [1m[36m (70.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 161ms (Views: 74.0ms | ActiveRecord: 73.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:41:24 +0100
+
+
+Started GET "/libros/alta?titulo=%C3%89bano&autor=Ryszard+Kapuscinski&genero=Cr%C3%B3nica+period%C3%ADsta&id=6" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Ébano", "autor"=>"Ryszard Kapuscinski", "genero"=>"Crónica periodísta", "id"=>"6"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Ébano' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["autor", "Ryszard Kapuscinski"], ["created_at", "2016-02-17 09:42:08.644626"], ["genero", "Crónica periodísta"], ["titulo", "Ébano"], ["updated_at", "2016-02-17 09:42:08.644626"]]
+  [1m[35m (53.0ms)[0m  commit transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 126ms (Views: 60.0ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:08 +0100
+
+
+Started GET "/libros/alta?titulo=%C3%89bano&autor=Michel+Houellebecq&genero=Narrativa&id=7" for 127.0.0.1 at 2016-02-17 10:42:49 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Ébano", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>"7"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Ébano' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:42:50 +0100
+
+
+Started GET "/libros/alta?titulo=Sumisi%C3%B3n&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Sumisión", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Sumisión' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "Michel Houellebecq"], ["created_at", "2016-02-17 09:43:12.367593"], ["genero", "Narrativa"], ["titulo", "Sumisión"], ["updated_at", "2016-02-17 09:43:12.367593"]]
+  [1m[36m (166.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 233ms (Views: 63.0ms | ActiveRecord: 166.6ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:12 +0100
+
+
+Started GET "/libros/alta?titulo=Sumisi%C3%B3n&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:43:45 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Sumisión", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (0.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Sumisión' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:46 +0100
+
+
+Started GET "/libros/alta?titulo=Sumisi%C3%B3n&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:43:52 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Sumisión", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Sumisión' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 119ms (Views: 93.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:52 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:43:52 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:43:53 +0100
+
+
+Started GET "/libros/alta?titulo=Sumisi%C3%B3n&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Sumisión", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Sumisión' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 82ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:00 +0100
+
+
+Started GET "/libros/alta?titulo=Sumisi%C3%B3n&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Sumisión", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mLibro Exists (1.0ms)[0m  SELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Sumisión' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 79ms (Views: 68.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:44:11 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 79ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:20 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>""}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = ''[0m
+  Rendered libros/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:39 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=Hamlet" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"Hamlet"}
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'Hamlet'[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:45:52 +0100
+
+
+Started GET "/libros/alta?titulo=Plataforma&autor=Michel+Houellebecq&genero=Narrativa&id=" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"Plataforma", "autor"=>"Michel Houellebecq", "genero"=>"Narrativa", "id"=>""}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'Plataforma' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "Michel Houellebecq"], ["created_at", "2016-02-17 09:46:12.421009"], ["genero", "Narrativa"], ["titulo", "Plataforma"], ["updated_at", "2016-02-17 09:46:12.421009"]]
+  [1m[36m (113.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 217ms (Views: 57.0ms | ActiveRecord: 116.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:12 +0100
+
+
+Started GET "/libros/buscar_autor?valor=Michel+Houellebecq" for 127.0.0.1 at 2016-02-17 10:46:20 +0100
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"Michel Houellebecq"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'Michel Houellebecq'
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:21 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:46:30 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:46:59 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 72ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:00 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:47:29 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 100ms (Views: 82.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:47:30 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 104ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:53:17 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:53:57 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:54:43 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:56:15 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:16 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:16 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 80ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:19 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:56:25 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:57:39 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 10:58:09 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:09 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:59:10 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 78ms (Views: 76.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:11 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:35 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 71ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 10:59:56 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:00:04 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:01:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 79ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:01:07 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:01:48 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:02:04 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 90ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:02:18 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:04:04 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:04:46 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:04:50 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-02-17 11:05:35 +0100
+
+
+Started GET "/libros/buscar_titulo?valor=El+gato+F%C3%A9lix" for 127.0.0.1 at 2016-02-17 11:05:52 +0100
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"El gato Félix"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix'[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:05:53 +0100
+
+
+Started GET "/libros/buscar_autor?valor=Michel+Houellebecq" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"Michel Houellebecq"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'Michel Houellebecq'[0m
+  Rendered libros/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:06 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Narrativa" for 127.0.0.1 at 2016-02-17 11:06:12 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Narrativa"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Narrativa'[0m
+  Rendered libros/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:12 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:13 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Narrativa" for 127.0.0.1 at 2016-02-17 11:06:20 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Narrativa"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Narrativa'[0m
+  Rendered libros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:21 +0100
+
+
+Started GET "/libros/buscar_genero?valor=Aventuras" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventuras"}
+  [1m[35mLibro Load (1.0ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventuras'[0m
+  Rendered libros/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:28 +0100
+
+
+Started GET "/libros/alta?titulo=El+gato+F%C3%A9lix&autor=&genero=&id=" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"", "genero"=>"", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (0.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 82ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:06:59 +0100
+
+
+Started GET "/libros/alta?titulo=&autor=&genero=dfsdaf&id=" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"", "autor"=>"", "genero"=>"dfsdaf", "id"=>""}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-17 11:07:19 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-14 21:05:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (45.0ms)
+Completed 200 OK in 331ms (Views: 251.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2016-03-14 21:05:46 +0100
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (128.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (630.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-03-14 21:07:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.0ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (103.0ms)
+Completed 200 OK in 959ms (Views: 891.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-03-14 21:07:37 +0100
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (1.0ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 217ms (Views: 213.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-14 21:12:45 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-10 18:58:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2016-04-10 18:58:45 +0200
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.1ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.6ms)
+
+
+Started GET "/libros" for 127.0.0.1 at 2016-04-10 18:58:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/libros"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.8ms)
+
+
+Started GET "/libros_index" for 127.0.0.1 at 2016-04-10 18:59:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/libros_index"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.0ms)
+
+
+Started GET "/libros_index_path" for 127.0.0.1 at 2016-04-10 18:59:21 +0200
+
+ActionController::RoutingError (No route matches [GET] "/libros_index_path"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/Vanesa/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.5ms)
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-04-10 18:59:51 +0200
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1046ms (Views: 1043.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/libros.css?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/libros.js?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/assets/libreria.jpg" for 127.0.0.1 at 2016-04-10 18:59:52 +0200
+
+
+Started GET "/libros/buscar_titulo?valor=gato" for 127.0.0.1 at 2016-04-10 19:00:11 +0200
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"gato"}
+  [1m[36mLibro Load (0.2ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.3ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'gato'
+  Rendered libros/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:12 +0200
+
+
+Started GET "/libros/buscar_titulo?valor=gato" for 127.0.0.1 at 2016-04-10 19:00:23 +0200
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"gato"}
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'gato'
+  Rendered libros/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:23 +0200
+
+
+Started GET "/libros/buscar_autor?valor=milena" for 127.0.0.1 at 2016-04-10 19:00:34 +0200
+Processing by LibrosController#buscar_autor as HTML
+  Parameters: {"valor"=>"milena"}
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."autor" = 'milena'
+  Rendered libros/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:34 +0200
+
+
+Started GET "/libros/modificar_vista?id=2" for 127.0.0.1 at 2016-04-10 19:00:44 +0200
+Processing by LibrosController#modificar_vista as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLibro Load (0.2ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/libros/modificar?titulo=El+gato+F%C3%A9lix&autor=Desconocido&genero=Aventurillas&id=2" for 127.0.0.1 at 2016-04-10 19:00:54 +0200
+Processing by LibrosController#modificar as HTML
+  Parameters: {"titulo"=>"El gato Félix", "autor"=>"Desconocido", "genero"=>"Aventurillas", "id"=>"2"}
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT  "libros".* FROM "libros"  WHERE "libros"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE ("libros"."titulo" = 'El gato Félix' AND "libros"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "libros" SET "genero" = ?, "updated_at" = ? WHERE "libros"."id" = 2  [["genero", "Aventurillas"], ["updated_at", "2016-04-10 17:00:54.959539"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.2ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 28.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:00:55 +0200
+
+
+Started GET "/libros/buscar_genero?valor=aventurillas" for 127.0.0.1 at 2016-04-10 19:01:03 +0200
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"aventurillas"}
+  [1m[36mLibro Load (0.2ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'aventurillas'
+  Rendered libros/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:01:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:01:03 +0200
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-04-10 19:09:56 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LibrosController#index as HTML
+  [1m[35mLibro Load (0.2ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 87ms (Views: 75.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:09:57 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:09:57 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:09:57 +0200
+
+
+Started GET "/libros/index" for 127.0.0.1 at 2016-04-10 19:10:03 +0200
+Processing by LibrosController#index as HTML
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  Rendered libros/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:03 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:03 +0200
+
+
+Started GET "/libros/buscar_titulo?valor=El+gato+F%C3%A9lix" for 127.0.0.1 at 2016-04-10 19:10:11 +0200
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"El gato Félix"}
+  [1m[35mLibro Load (0.2ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'El gato Félix'[0m
+  Rendered libros/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:11 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:11 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:11 +0200
+
+
+Started GET "/libros/buscar_titulo?valor=gato" for 127.0.0.1 at 2016-04-10 19:10:15 +0200
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"gato"}
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.1ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'gato'[0m
+  Rendered libros/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:15 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:15 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:15 +0200
+
+
+Started GET "/libros/buscar_genero?valor=Aventurillas" for 127.0.0.1 at 2016-04-10 19:10:28 +0200
+Processing by LibrosController#buscar_genero as HTML
+  Parameters: {"valor"=>"Aventurillas"}
+  [1m[35mLibro Load (0.2ms)[0m  SELECT "libros".* FROM "libros"
+  [1m[36mLibro Load (0.2ms)[0m  [1mSELECT "libros".* FROM "libros"  WHERE "libros"."genero" = 'Aventurillas'[0m
+  Rendered libros/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:28 +0200
+
+
+Started GET "/libros/alta?titulo=El+Quijote&autor=Miguel+de+Cervantes&genero=Caballer%C3%ADa&id=" for 127.0.0.1 at 2016-04-10 19:10:55 +0200
+Processing by LibrosController#alta as HTML
+  Parameters: {"titulo"=>"El Quijote", "autor"=>"Miguel de Cervantes", "genero"=>"Caballería", "id"=>""}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mLibro Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "libros"  WHERE "libros"."titulo" = 'El Quijote' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "libros" ("autor", "created_at", "genero", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["autor", "Miguel de Cervantes"], ["created_at", "2016-04-10 17:10:55.369678"], ["genero", "Caballería"], ["titulo", "El Quijote"], ["updated_at", "2016-04-10 17:10:55.369678"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"
+  Rendered libros/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 24.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:10:55 +0200
+
+
+Started GET "/libros/buscar_titulo?valor=El+Quijote" for 127.0.0.1 at 2016-04-10 19:11:01 +0200
+Processing by LibrosController#buscar_titulo as HTML
+  Parameters: {"valor"=>"El Quijote"}
+  [1m[36mLibro Load (0.4ms)[0m  [1mSELECT "libros".* FROM "libros"[0m
+  [1m[35mLibro Load (0.1ms)[0m  SELECT "libros".* FROM "libros"  WHERE "libros"."titulo" = 'El Quijote'
+  Rendered libros/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 19:11:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 19:11:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 19:11:01 +0200
